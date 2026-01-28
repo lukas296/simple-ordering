@@ -8,8 +8,8 @@ export class OrderService {
 
     createOrder(orderData: CreateOrderBody): Order {
         const id = randomUUID()
-        const totalAmount = orderData.lineItems.reduce((sum, item) => sum + item.quantity, 0);
-        const totalPrice = orderData.lineItems.reduce((sum, item) => sum + item.quantity * item.unitPrice,0);
+        const totalAmount = orderData?.lineItems.reduce((sum, item) => sum + item.quantity, 0);
+        const totalPrice = orderData?.lineItems.reduce((sum, item) => sum + item.quantity * item.unitPrice,0);
 
         const order: Order = {
             id,
