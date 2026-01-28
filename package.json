@@ -1,0 +1,16 @@
+{
+    "name": "simple-ordering",
+    "version": "1.0.0",
+    "description": "Simple order management system",
+    "author": "",
+    "license": "MIT",
+    "scripts": {
+        "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+        "server:dev": "cd backend && npm run dev",
+        "client:dev": "cd frontend && npm run dev",
+        "install:dependencies": "npm i && cd test && npm i && cd .. && cd backend && npm i"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
